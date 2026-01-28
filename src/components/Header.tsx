@@ -35,26 +35,26 @@ const Header: React.FC = () => {
   return (
     <header
       className={cn(
-        'fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-full max-w-fit',
+        'fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[98%] md:w-full md:max-w-fit',
         isScrolled ? 'top-4' : 'top-8'
       )}
     >
       <div
         className={cn(
-          "relative flex items-center gap-1 p-3 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 backdrop-blur-xl",
-          isScrolled ? "bg-black/60 pr-3 pl-8" : "bg-white/[0.03] pr-3 pl-8"
+          "relative flex items-center justify-between md:justify-start gap-1 p-2 md:p-3 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 backdrop-blur-xl w-full md:w-auto",
+          isScrolled ? "bg-black/60 px-4 md:pr-3 md:pl-8" : "bg-white/[0.03] px-4 md:pr-3 md:pl-8"
         )}
       >
         {/* Shine effect */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
 
         {/* Logo Section */}
-        <div className={cn('flex items-center gap-4 relative z-10', isRTL && 'order-last pl-4 pr-0')}>
+        <div className={cn('flex items-center gap-4 relative z-10', isRTL && 'order-last md:order-first')}>
           <a href="#" className="block hover:opacity-80 transition-opacity">
             <img
               src={kitesLogo}
               alt="KITES Holding Group"
-              className="h-20 w-auto object-contain brightness-0 invert shrink-0"
+              className="h-10 md:h-16 w-auto object-contain brightness-0 invert shrink-0"
             />
           </a>
           {/* Vertical Divider */}
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Actions Section */}
-        <div className={cn('flex items-center gap-2 relative z-10 pl-4', isRTL && 'order-first pl-0 pr-4')}>
+        <div className={cn('flex items-center gap-2 relative z-10', isRTL && 'order-first md:order-last')}>
           <button
             onClick={toggleLanguage}
             className="px-5 py-2 text-[10px] font-black tracking-wider rounded-full border border-white/10 bg-white/5 text-white hover:bg-accent hover:border-accent hover:text-black transition-all duration-300 uppercase"

@@ -94,12 +94,12 @@ const HeroSection: React.FC = () => {
           {/* CTA Buttons - Premium Glass */}
           <div
             className={cn(
-              'flex flex-col sm:flex-row gap-8 justify-center items-center',
+              'flex flex-col sm:flex-row gap-8 justify-center items-stretch sm:items-center w-full max-w-sm sm:max-w-none mx-auto',
               isRTL && 'sm:flex-row-reverse'
             )}
           >
             {/* Primary Button - Aurora Gradient */}
-            <MagneticButton>
+            <MagneticButton className="w-full sm:w-auto">
               <div className="w-full sm:w-auto">
                 <ScrollLink
                   to="companies"
@@ -123,7 +123,7 @@ const HeroSection: React.FC = () => {
             </MagneticButton>
 
             {/* Secondary Button - Ultra Frost Glass */}
-            <MagneticButton>
+            <MagneticButton className="w-full sm:w-auto">
               <div className="w-full sm:w-auto">
                 <ScrollLink
                   to="contact"

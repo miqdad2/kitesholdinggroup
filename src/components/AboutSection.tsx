@@ -130,7 +130,7 @@ const AboutSection: React.FC = () => {
             </SpotlightCard>
 
             {/* Visual Element / Feature Card */}
-            <div className="about-card md:col-span-2 lg:col-span-2 lg:row-span-1 bg-gradient-to-br from-accent/20 to-accent-glow/20 backdrop-blur-3xl rounded-[2rem] p-10 flex items-center justify-between relative overflow-hidden text-white group border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-accent/10 hover:shadow-2xl">
+            <div className="about-card md:col-span-2 lg:col-span-2 lg:row-span-1 bg-gradient-to-br from-accent/20 to-accent-glow/20 backdrop-blur-3xl rounded-[2rem] p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden text-white group border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-accent/10 hover:shadow-2xl">
               <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-overlay"></div>
               <SpotlightCard className="absolute inset-0 z-0" spotlightColor="rgba(255, 255, 255, 0.15)"><></></SpotlightCard>
               <div className="z-10 flex flex-col gap-2 relative pointer-events-none">
@@ -138,7 +138,7 @@ const AboutSection: React.FC = () => {
                 <span className="text-2xl font-semibold opacity-90 tracking-tight">{isRTL ? 'شركات رائدة' : 'Leading Companies'}</span>
               </div>
               {/* Decorative Icons */}
-              <div className="flex gap-4 z-10 relative pointer-events-none">
+              <div className="flex flex-wrap gap-4 z-10 relative pointer-events-none w-full md:w-auto">
                 <div className="px-6 py-3 bg-black/40 backdrop-blur-xl rounded-full text-sm font-semibold border border-white/10 group-hover:scale-105 transition-transform duration-500">
                   {isRTL ? 'المحاكاة' : 'Simulation'}
                 </div>
